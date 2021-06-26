@@ -4,6 +4,7 @@ import { createEarth } from "./components/Earth.js";
 import { createScene } from "./components/Scene.js";
 import { createLight } from "./components/Light.js";
 import { createSpace } from "./components/Space.js";
+import { createMoon } from "./components/Moon.js";
 
 // importing systems
 import { createRenderer } from "./systems/renderer.js";
@@ -21,9 +22,13 @@ class World {
     this.camera = createCamera(container);
     this.scene = createScene();
     this.earth = createEarth();
+    this.moon = createMoon();
     this.space = createSpace();
     this.renderer = createRenderer();
     container.append(this.renderer.domElement);
+
+    // adding moon to scene
+    this.scene.add(this.moon);
 
     // adding earth to scene
     this.scene.add(this.earth);
@@ -43,7 +48,7 @@ class World {
 
     // animation loop
     loop = new Loop(this.camera, this.scene, this.renderer);
-    loop.updatables.push(this.earth);
+    loop.updatables.push(this.earth, this.moon);
   }
 
   render() {
