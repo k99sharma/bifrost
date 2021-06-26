@@ -24,7 +24,7 @@
   <body>
     <main>
       <!-- navbar container -->
-      <div class="container-fluid my-3 rounded-3" id="navbar_container">
+      <div class="container-fluid my-5 rounded-3" id="navbar_container">
         <nav>
           <!-- brand -->
           <div class="mx-5" id="brand">
@@ -50,22 +50,37 @@
       <div class="container-fluid" id="main_container">
         <div class="row">
           <!-- content container -->
-          <div class="col-12 col-md-4" id="content_container">
+          <div class="col-12 col-md-4 mb-3 mb-md-0" id="content_container">
             <!-- headline -->
-            <div class="container my-5" id="headline">
-              <h2 class="greenGradiant">Dashboard</h2>
+            <div class="container my-3 box_shadow rounded-3" id="headline">
+              <!-- dashboard headline -->
+              <div class="p-3" id="dashboard_headline">
+                <h2 class="greenGradiant">Dashboard</h2>
+              </div>
+              <!-- dashboard headline ends here -->
+
+              <!-- dashboard description -->
+              <div class="p-3" id="dashboard_description">
+                <h5>
+                  You can locate any country on the globe by entering its name
+                  in the provided input
+                </h5>
+                <br />
+                <h5>You can also interact with the Globe</h5>
+              </div>
+              <!-- dashboard description ends here -->
             </div>
             <!-- headline ends here -->
 
             <!-- form container -->
             <div
-              class="container box_shadow my-5 p-4 rounded-3"
+              class="container box_shadow mb-4 p-3 rounded-3"
               id="countryForm_container"
             >
-              <form>
-                <div class="mb-4">
+              <form autocomplete="off">
+                <div class="mb-3">
                   <label for="countryName" class="form-label"
-                    >Country Name</label
+                    >Entry Country Name</label
                   >
                   <input
                     type="text"
@@ -83,7 +98,12 @@
                     id="locate_button"
                     type="submit"
                   >
-                    Locate
+                    <img
+                      class="img-fluid mr-1"
+                      src="./assets/icons/locate.png"
+                      alt="locate icon"
+                    />
+                    <span>Locate</span>
                   </button>
                 </div>
               </form>
@@ -92,15 +112,15 @@
 
             <!-- details container -->
             <div
-              class="container box_shadow p-2 mb-5 rounded-3"
+              class="container box_shadow py-3 mb-2 rounded-3"
               id="details_container"
             >
-              <div class="container mb-4" id="description_container">
-                You can also see details about located countries
+              <div class="mb-3" id="description_container">
+                <h5>Located Countries Information</h5>
               </div>
 
               <!-- details model -->
-              <div class="container mb-3" id="details_button">
+              <div class="mb-md-3" id="details_button">
                 <!-- Button trigger modal -->
                 <button
                   type="button"
@@ -110,7 +130,12 @@
                   id="countryDetailsButton"
                   disabled
                 >
-                  Country Details
+                  <img
+                    class="img-fluid"
+                    src="./assets/icons/details.png"
+                    alt="locate icon"
+                  />
+                  <span> Country Details</span>
                 </button>
 
                 <!-- Details Modal -->

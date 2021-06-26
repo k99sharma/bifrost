@@ -1,78 +1,75 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #393E46;
-    color: #EEEEEE;
+body {
+  background-color: #393e46;
+  color: #eeeeee;
+  font-family: "Manrope", sans-serif;
 }
-
 
 /* major container */
-#main_container{
-    background-color: #222831;
+#main_container {
+  background-color: #222831;
 
-    margin-top: 5%;
-    margin-bottom: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 
-    border-radius: 20px;
+  border-radius: 20px;
 }
 
-
 /* Navbar */
-nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    background-color: #222831;
+  background-color: #222831;
 }
 
 /* github code repo link button */
-#getCode_button{
-    margin-left: auto;
+#getCode_button {
+  margin-left: auto;
 }
 
-
-#headline_container{
-    margin-top: 10%;
-    margin-bottom: 10%;
+#headline_container {
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 /* image container */
-#image_container{
-    text-align: center;
+#image_container {
+  text-align: center;
 }
 
-#image_container img{
-    max-width: 400px;
-    max-height: 350px;
+#image_container img {
+  max-height: 400px;
 }
-
 
 /* footer */
-footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.greenGradiant{
-    background: linear-gradient(to right, #00b712 0%, #5aff15 74%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.greenGradiant {
+  background: linear-gradient(to right, #00b712 0%, #5aff15 74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.greenGradiantButton{
-    color: #EEEEEE;
+.greenGradiantButton {
+  color: #eeeeee;
 
-    background-color: #00b712;
-    background-image: linear-gradient(315deg, #00b712 0%, #5aff15 74%);
+  background-color: #00b712;
+  background-image: linear-gradient(315deg, #00b712 0%, #5aff15 74%);
 }
 
-.box_shadow{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.box_shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
