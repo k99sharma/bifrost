@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/dashboard.css" type="text/css" />
+    <title>Bifrost | Dashboard</title>
+  </head>
+
+  <body>
+    <main>
+      <!-- navbar container -->
+      <div class="container-fluid my-3 rounded-3" id="navbar_container">
+        <nav>
+          <!-- brand -->
+          <div class="mx-5" id="brand">
+            <a class="navbar-brand" href="/index.html">bifrost</a>
+          </div>
+          <!-- brand ends here -->
+        </nav>
+      </div>
+      <!-- navbar container ends here -->
+
+      <!-- successful alert -->
+      <div
+        class="container alert alert-success alert-dismissible fade show d-none"
+        role="alert"
+      >
+        <strong>Country location is marked successfully !</strong>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+      <!-- successful alert ends here -->
+
+      <!-- danger alert -->
+      <div
+        class="container alert alert-danger alert-dismissible fade show d-none"
+        role="alert"
+      >
+        <strong
+          >Country not found! Please check your entry or try again later</strong
+        >
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+      <!-- danger alert ends here -->
+
+      <!-- content container -->
+      <div class="container-fluid" id="main_container">
+        <div class="row">
+          <!-- content container -->
+          <div class="col-12 col-md-4 box_shadow" id="content_container">
+            <!-- headline -->
+            <div class="container my-5" id="headline">
+              <h2 class="greenGradiant">Dashboard</h2>
+            </div>
+            <!-- headline ends here -->
+
+            <!-- form container -->
+            <div
+              class="container box_shadow my-5 p-4 rounded-3"
+              id="countryForm_container"
+            >
+              <form>
+                <div class="mb-4">
+                  <label for="countryName" class="form-label"
+                    >Country Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="country"
+                    id="countryName"
+                    placeholder="eg: Canada"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <button
+                    class="btn greenGradiantButton box_shadow"
+                    id="locate_button"
+                    type="submit"
+                  >
+                    Locate
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- form container ends here -->
+
+            <!-- details container -->
+            <div
+              class="container box_shadow p-2 mb-5 rounded-3"
+              id="details_container"
+            >
+              <div class="container mb-4" id="description_container">
+                You can also see details about located countries
+              </div>
+
+              <!-- details model -->
+              <div class="container mb-3" id="details_button">
+                <!-- Button trigger modal -->
+                <button
+                  type="button"
+                  class="btn greenGradiantButton box_shadow"
+                  data-bs-toggle="modal"
+                  data-bs-target="#countryDetailsModal"
+                  id="countryDetailsButton"
+                  disabled
+                >
+                  Country Details
+                </button>
+
+                <!-- Details Modal -->
+                <div
+                  class="modal fade"
+                  id="countryDetailsModal"
+                  tabindex="-1"
+                  aria-labelledby="countryDetailsModal"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <!-- modal header -->
+                      <div class="modal-header box_shadow">
+                        <h5
+                          class="modal-title greenGradiant"
+                          id="countryDetailsModal_label"
+                        >
+                          Country Details
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close btn-close-white"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <!-- modal header ends here -->
+
+                      <!-- modal body -->
+                      <div class="modal-body">
+                        <!-- row zero -->
+                        <div class="row mb-3">
+                          <div class="col-6 mb-3 mb-md-0">
+                            <div
+                              class="container p-2 rounded-3 flex_box"
+                              id="countryFlagHolder"
+                            ></div>
+                          </div>
+                        </div>
+                        <!-- row zero ends here -->
+
+                        <!-- row one -->
+                        <div class="row mb-3">
+                          <div class="col-12 col-md-6 mb-3 mb-md-0">
+                            <div
+                              class="
+                                container
+                                p-2
+                                rounded-3
+                                modal_label
+                                flex_box
+                              "
+                            >
+                              Name
+                            </div>
+                          </div>
+
+                          <div class="col-12 col-md-6">
+                            <div
+                              class="
+                                container
+                                p-2
+                                rounded-3
+                                modal_value
+                                flex_box
+                              "
+                              id="countryName_value"
+                            ></div>
+                          </div>
+                        </div>
+                        <!-- row one ends here -->
+
+                        <!-- row two -->
+                        <div class="row mb-3">
+                          <div class="col-12 col-md-6 mb-3 mb-md-0">
+                            <div
+                              class="
+                                container
+                                p-2
+                                rounded-3
+                                modal_label
+                                flex_box
+                              "
+                            >
+                              Capital
+                            </div>
+                          </div>
+
+                          <div class="col-12 col-md-6">
+                            <div
+                              class="
+                                container
+                                p-2
+                                rounded-3
+                                modal_value
+                                flex_box
+                              "
+                              id="countryCapital_value"
+                            ></div>
+                          </div>
+                        </div>
+                        <!-- row two ends here -->
+
+                        <!-- row three -->
+                        <div class="row mb-3">
+                          <div class="col-12 col-md-6 mb-3 mb-md-0">
+                            <div
+                              class="
+                                container
+                                p-2
+                                rounded-3
+                                modal_label
+                                flex_box
+                              "
+                            >
+                              Region
+                            </div>
+                          </div>
+
+                          <div class="col-12 col-md-6">
+                            <div
+                              class="
+                                container
+                                p-2
+                                rounded-3
+                                modal_value
+                                flex_box
+                              "
+                              id="countryRegion_value"
+                            ></div>
+                          </div>
+                        </div>
+                        <!-- row three ends here -->
+
+                        <!-- row four -->
+                        <div class="row mb-3">
+                          <div class="col-12 col-md-6 mb-3 mb-md-0">
+                            <div
+                              class="
+                                container
+                                p-2
+                                rounded-3
+                                modal_label
+                                flex_box
+                              "
+                            >
+                              Subregion
+                            </div>
+                          </div>
+
+                          <div class="col-12 col-md-6">
+                            <div
+                              class="
+                                container
+                                p-2
+                                rounded-3
+                                modal_value
+                                flex_box
+                              "
+                              id="countrySubregion_value"
+                            ></div>
+                          </div>
+                        </div>
+                        <!-- row four ends here -->
+
+                        <!-- row four -->
+                        <div class="row mb-3">
+                          <div class="col-12 col-md-6 mb-3 mb-md-0">
+                            <div
+                              class="
+                                container
+                                p-2
+                                rounded-3
+                                modal_label
+                                flex_box
+                              "
+                            >
+                              Area
+                            </div>
+                          </div>
+
+                          <div class="col-12 col-md-6">
+                            <div
+                              class="
+                                container
+                                p-2
+                                rounded-3
+                                modal_value
+                                flex_box
+                              "
+                              id="countryArea_value"
+                            ></div>
+                          </div>
+                        </div>
+                        <!-- row four ends here -->
+
+                        <!-- row five -->
+                        <div class="row mb-3">
+                          <div class="col-12 col-md-6 mb-3 mb-md-0">
+                            <div
+                              class="
+                                container
+                                p-2
+                                rounded-3
+                                modal_label
+                                flex_box
+                              "
+                            >
+                              Currency Code
+                            </div>
+                          </div>
+
+                          <div class="col-12 col-md-6">
+                            <div
+                              class="
+                                container
+                                p-2
+                                rounded-3
+                                modal_value
+                                flex_box
+                              "
+                              id="countryCurrencySymbol_value"
+                            ></div>
+                          </div>
+                        </div>
+                        <!-- row five ends here -->
+
+                        <!-- row six -->
+                        <div class="row mb-3">
+                          <div class="col-12 col-md-6 mb-3 mb-md-0">
+                            <div
+                              class="
+                                container
+                                p-2
+                                rounded-3
+                                modal_label
+                                flex_box
+                              "
+                            >
+                              Currency Name
+                            </div>
+                          </div>
+
+                          <div class="col-12 col-md-6">
+                            <div
+                              class="
+                                container
+                                p-2
+                                rounded-3
+                                modal_value
+                                flex_box
+                              "
+                              id="countryCurrencyName_value"
+                            ></div>
+                          </div>
+                        </div>
+                        <!-- row six ends here -->
+                      </div>
+                      <!-- model body ends here -->
+                    </div>
+                  </div>
+                </div>
+                <!-- details model ends here -->
+              </div>
+              <!-- details model ends here -->
+            </div>
+            <!-- details container ends here -->
+          </div>
+          <!-- content container ends here -->
+
+          <!-- 3D model container -->
+          <div class="col-12 col-md-8" id="model_container">
+            <div id="scene"></div>
+          </div>
+          <!-- 3D model container ends here -->
+        </div>
+      </div>
+      <!-- content container ends here -->
+
+      <!-- footer -->
+      <footer class="mb-5">
+        <!-- social links -->
+        <div class="my-4" id="socialLinks">
+          <a href="https://github.com/k99sharma" target="_blank"
+            ><img
+              class="img-fluid mx-2"
+              width="22px"
+              height="22px"
+              src="./assets/icons/github.png"
+              alt="github link"
+          /></a>
+          <a href="https://twitter.com/k99_sharma" target="_blank"
+            ><img
+              class="img-fluid mx-2"
+              width="22px"
+              height="22px"
+              src="./assets/icons/twitter.png"
+              alt="twitter link"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/kalash-sharma-a4a6a6194/"
+            target="_blank"
+            ><img
+              class="img-fluid mx-2"
+              width="22px"
+              height="22px"
+              src="./assets/icons/linkedin.png"
+              alt="linkedin link"
+          /></a>
+          <a href="https://www.instagram.com/k99.sharma/" target="_blank"
+            ><img
+              class="img-fluid mx-2"
+              width="22px"
+              height="22px"
+              src="./assets/icons/instagram.png"
+              alt="instagram link"
+          /></a>
+        </div>
+        <!-- social links ends here -->
+
+        <!-- designation container -->
+        <div id="designation">
+          <small
+            >Designed & built by
+            <span
+              ><a
+                class="greenGradiant"
+                href="https://www.kalashsharma.me"
+                target="_blank"
+                >ghost_32</a
+              ></span
+            ></small
+          >
+        </div>
+        <!-- designation container ends here -->
+
+        <!-- copyright container -->
+        <div id="copyright">
+          <small>© 2021 Bifrost. All rights reserved</small>
+        </div>
+        <!-- copyright container ends here -->
+      </footer>
+      <!-- footer ends here -->
+    </main>
+
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- js script -->
+    <script type="module" src="./src/dashboard.js"></script>
+  </body>
+</html>
