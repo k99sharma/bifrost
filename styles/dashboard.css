@@ -44,6 +44,11 @@ body {
   color: #222831;
 }
 
+/* model container */
+#model_container {
+  height: 75vh;
+}
+
 /* footer */
 footer {
   display: flex;
