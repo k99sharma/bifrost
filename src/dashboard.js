@@ -66,7 +66,8 @@ function handleModal(data) {
 
     // country name value
     const name = (data.name) ? data.name : '-';
-    nameHolder.innerHTML = `<h5>${name}</h5>`;
+    const countryCode= (data.code) ? data.code : '-';
+    nameHolder.innerHTML = `<h5>${name} (${countryCode})</h5>`;
 
     // country capital value
     const capital = (data.capital) ? data.capital : '-';
@@ -90,7 +91,8 @@ function handleModal(data) {
 
     // country currency name value
     const currencyName = (data.currencies[0].name) ? data.currencies[0].name : '-';
-    currencyNameHolder.innerHTML = `<h5>${currencyName}</h5>`;
+    const currencyCode = (data.currencies[0].code) ? data.currencies[0].code : '-';
+    currencyNameHolder.innerHTML = `<h5>${currencyName} (${currencyCode})</h5>`;
 
 }
 
