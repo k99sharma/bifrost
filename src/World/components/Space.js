@@ -3,7 +3,7 @@ import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 const textureLoader = new THREE.TextureLoader();
 
 function createSpace(){
-    const geometry = new THREE.SphereGeometry(600, 32, 32);
+    const geometry = new THREE.SphereGeometry(800, 32, 32);
     const space_texture = textureLoader.load('/src/World/assets/textures/space/milkyway_map.jpg');
 
     const material = new THREE.MeshBasicMaterial({
