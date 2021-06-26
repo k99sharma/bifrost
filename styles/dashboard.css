@@ -31,8 +31,6 @@ body {
 }
 
 .modal_value {
-  border-width: 5px;
-  border-style: inset;
   color: #222831;
   background-color: #eeeeee;
 }
