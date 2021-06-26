@@ -1,104 +1,168 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
     <!-- custom CSS file -->
     <link href="styles/index.css" rel="stylesheet" type="text/css" />
     <title>Bifrost | Home</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/logo/bifrost-logo.svg" />
   </head>
 
   <body>
     <main>
-        <!-- main container -->
-        <div class="container p-2 box_shadow" id="main_container">
-            <!-- navbar container -->
-            <div class="container p-4" id="navbar_container">
-                <nav>
-                    <!-- brand -->
-                    <div id="brand">
-                      <a class="navbar-brand" href="/index.html">bifrost</a>
-                    </div>
-                    <!-- brand ends here -->
-    
-                    <!-- code repo link -->
-                    <div class="rounded-3" id="getCode_button">
-                        <a class="btn greenGradiantButton box_shadow" target="_blank" href="https://github.com/k99sharma/bifrost-frontend">Get Code</a>
-                    </div>
-                    <!-- code repo link button -->
-                </nav>
+      <!-- main container -->
+      <div class="container p-2 box_shadow" id="main_container">
+        <!-- navbar container -->
+        <div class="container p-4" id="navbar_container">
+          <nav>
+            <!-- brand -->
+            <div id="brand">
+              <a class="navbar-brand" href="/index.html"
+                ><img
+                  class="img-src"
+                  src="./assets/brand/bifrost-brand.svg"
+                  width="100px"
+                  height="50px"
+                  alt="bifrost brand"
+              /></a>
             </div>
-            <!-- navbar ends here -->
+            <!-- brand ends here -->
 
-
-            <!-- content container -->
-            <div class="container" id="content_container">
-                <div class="row">
-                    <!-- text container -->
-                    <div class="col-12 col-md-6" id="text_container">
-                        <div class="container" id="headline_container">
-                            <h1 class="greenGradiant">
-                                Geolocating Countries
-                            </h1>
-                            <br />
-                            <h5>
-                                Pinpoint location of countries on 3D modeled Earth
-                            </h5>
-                        </div>
-
-                        <div class="container" id="nextPage_button">
-                            <a class="btn btn-lg greenGradiantButton box_shadow" href="/dashboard.html">
-                                Get Started
-                            </a>
-                        </div>
-                    </div>
-                    <!-- text container ends here -->
-
-                    <!-- image container -->
-                    <div class="col-12 col-md-6 p-5" id="image_container">
-                        <img class="img-fluid" src="assets/images/index.svg" alt="geolocating image" />
-                    </div>
-                    <!-- image container ends here -->
-                </div>
+            <!-- code repo link -->
+            <div class="rounded-3" id="getCode_button">
+              <a
+                class="btn greenGradiantButton box_shadow"
+                target="_blank"
+                href="https://github.com/k99sharma/bifrost-frontend"
+                >Get Code</a
+              >
             </div>
-            <!-- content container ends here -->
+            <!-- code repo link button -->
+          </nav>
         </div>
-        <!-- main container ends here -->
+        <!-- navbar ends here -->
 
-        <!-- footer -->
-        <footer class="mb-5">
-            <!-- social links -->
-            <div class="my-4" id="socialLinks">
-                <a href="https://github.com/k99sharma" target="_blank"><img class="img-fluid mx-2" width="22px" height="22px" src="./assets/icons/github.png" alt="github link" /></a>
-                <a href="https://twitter.com/k99_sharma" target="_blank"><img class="img-fluid mx-2" width="22px" height="22px"  src="./assets/icons/twitter.png" alt="twitter link" /></a>
-                <a href="https://www.linkedin.com/in/kalash-sharma-a4a6a6194/" target="_blank"><img class="img-fluid mx-2" width="22px" height="22px"  src="./assets/icons/linkedin.png" alt="linkedin link" /></a>
-                <a href="https://www.instagram.com/k99.sharma/" target="_blank"><img class="img-fluid mx-2" width="22px" height="22px"  src="./assets/icons/instagram.png" alt="instagram link" /></a>
+        <!-- content container -->
+        <div class="container" id="content_container">
+          <div class="row">
+            <!-- text container -->
+            <div class="col-12 col-md-6" id="text_container">
+              <div class="container" id="headline_container">
+                <h1 class="greenGradiant">Geolocating Countries</h1>
+                <br />
+                <h5>Pinpoint location of countries on 3D modeled Earth</h5>
+              </div>
+
+              <div class="container" id="nextPage_button">
+                <a
+                  class="btn btn-lg greenGradiantButton box_shadow"
+                  href="/dashboard.html"
+                >
+                  Get Started
+                </a>
+              </div>
             </div>
-            <!-- social links ends here -->
+            <!-- text container ends here -->
 
-            <!-- designation container -->
-            <div id="designation">
-                <small>Designed & built by <span><a class="greenGradiant" href="https://www.kalashsharma.me" target="_blank">ghost_32</a></span></small>
+            <!-- image container -->
+            <div class="col-12 col-md-6 p-5" id="image_container">
+              <img
+                class="img-fluid"
+                src="assets/images/index.svg"
+                alt="geolocating image"
+              />
             </div>
-            <!-- designation container ends here -->
+            <!-- image container ends here -->
+          </div>
+        </div>
+        <!-- content container ends here -->
+      </div>
+      <!-- main container ends here -->
 
-            <!-- copyright container -->
-            <div id="copyright">
-                <small>© 2021 Bifrost. All rights reserved</small>
-            </div>
-            <!-- copyright container ends here -->
-        </footer>
-        <!-- footer ends here -->
+      <!-- footer -->
+      <footer class="mb-5">
+        <!-- social links -->
+        <div class="my-4" id="socialLinks">
+          <a href="https://github.com/k99sharma" target="_blank"
+            ><img
+              class="img-fluid mx-2"
+              width="22px"
+              height="22px"
+              src="./assets/icons/github.png"
+              alt="github link"
+          /></a>
+          <a href="https://twitter.com/k99_sharma" target="_blank"
+            ><img
+              class="img-fluid mx-2"
+              width="22px"
+              height="22px"
+              src="./assets/icons/twitter.png"
+              alt="twitter link"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/kalash-sharma-a4a6a6194/"
+            target="_blank"
+            ><img
+              class="img-fluid mx-2"
+              width="22px"
+              height="22px"
+              src="./assets/icons/linkedin.png"
+              alt="linkedin link"
+          /></a>
+          <a href="https://www.instagram.com/k99.sharma/" target="_blank"
+            ><img
+              class="img-fluid mx-2"
+              width="22px"
+              height="22px"
+              src="./assets/icons/instagram.png"
+              alt="instagram link"
+          /></a>
+        </div>
+        <!-- social links ends here -->
 
+        <!-- designation container -->
+        <div id="designation">
+          <small
+            >Designed & built by
+            <span
+              ><a
+                class="greenGradiant"
+                href="https://www.kalashsharma.me"
+                target="_blank"
+                >ghost_32</a
+              ></span
+            ></small
+          >
+        </div>
+        <!-- designation container ends here -->
+
+        <!-- copyright container -->
+        <div id="copyright">
+          <small>© 2021 Bifrost. All rights reserved</small>
+        </div>
+        <!-- copyright container ends here -->
+      </footer>
+      <!-- footer ends here -->
     </main>
 
     <!-- bootstrap CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
