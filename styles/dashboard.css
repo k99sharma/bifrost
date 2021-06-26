@@ -16,7 +16,6 @@ body {
 #main_container {
   background-color: #222831;
 
-  margin-top: 5%;
   margin-bottom: 3%;
 }
 
@@ -49,7 +48,7 @@ body {
 
 /* model container */
 #model_container {
-  height: 75vh;
+  height: 80vh;
 }
 
 /* footer */
