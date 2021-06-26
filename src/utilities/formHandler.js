@@ -30,7 +30,6 @@ function handleForm(world) {
       }
     } else {
       // wrong input
-      console.log("Wrong Input");
       alertHandler("warning");
     }
   });
