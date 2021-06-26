@@ -27,7 +27,7 @@
       <div class="container-fluid my-5 rounded-3" id="navbar_container">
         <nav>
           <!-- brand -->
-          <div class="mx-5" id="brand">
+          <div id="brand">
             <a class="navbar-brand" href="/index.html"
               ><img
                 class="img-src"
@@ -52,15 +52,18 @@
           <!-- content container -->
           <div class="col-12 col-md-4 mb-3 mb-md-0" id="content_container">
             <!-- headline -->
-            <div class="container my-3 box_shadow rounded-3" id="headline">
+            <div
+              class="container my-4 box_shadow rounded-3 greyGradiant p-3"
+              id="headline"
+            >
               <!-- dashboard headline -->
-              <div class="p-3" id="dashboard_headline">
+              <div id="dashboard_headline">
                 <h2 class="greenGradiant">Dashboard</h2>
               </div>
               <!-- dashboard headline ends here -->
 
               <!-- dashboard description -->
-              <div class="p-3" id="dashboard_description">
+              <div id="dashboard_description">
                 <h5>
                   You can locate any country on the globe by entering its name
                   in the provided input
@@ -74,13 +77,13 @@
 
             <!-- form container -->
             <div
-              class="container box_shadow mb-4 p-3 rounded-3"
+              class="container box_shadow mb-4 p-3 rounded-3 greyGradiant"
               id="countryForm_container"
             >
               <form autocomplete="off">
                 <div class="mb-3">
                   <label for="countryName" class="form-label"
-                    >Entry Country Name</label
+                    ><h5>Entry Country Name</h5></label
                   >
                   <input
                     type="text"
@@ -112,11 +115,11 @@
 
             <!-- details container -->
             <div
-              class="container box_shadow py-3 mb-2 rounded-3"
+              class="container box_shadow py-3 mb-2 rounded-3 greyGradiant"
               id="details_container"
             >
               <div class="mb-3" id="description_container">
-                <h5>Located Countries Information</h5>
+                <h5>Located Country Information</h5>
               </div>
 
               <!-- details model -->
@@ -146,14 +149,11 @@
                   aria-labelledby="countryDetailsModal"
                   aria-hidden="true"
                 >
-                  <div class="modal-dialog">
-                    <div class="modal-content">
+                  <div class="modal-dialog greyGradiant">
+                    <div class="modal-content grey">
                       <!-- modal header -->
-                      <div class="modal-header">
-                        <h5
-                          class="modal-title greenGradiant"
-                          id="countryDetailsModal_label"
-                        >
+                      <div class="modal-header greyGradiant">
+                        <h5 class="modal-title" id="countryDetailsModal_label">
                           Country Details
                         </h5>
                         <button
@@ -186,11 +186,11 @@
                                 container
                                 p-2
                                 rounded-3
-                                modal_label
+                                modal_background
                                 flex_box
                               "
                             >
-                              Name
+                              <h5>Name</h5>
                             </div>
                           </div>
 
@@ -217,11 +217,11 @@
                                 container
                                 p-2
                                 rounded-3
-                                modal_label
+                                modal_background
                                 flex_box
                               "
                             >
-                              Capital
+                              <h5>Capital</h5>
                             </div>
                           </div>
 
@@ -248,11 +248,11 @@
                                 container
                                 p-2
                                 rounded-3
-                                modal_label
+                                modal_background
                                 flex_box
                               "
                             >
-                              Region
+                              <h5>Region</h5>
                             </div>
                           </div>
 
@@ -279,11 +279,11 @@
                                 container
                                 p-2
                                 rounded-3
-                                modal_label
+                                modal_background
                                 flex_box
                               "
                             >
-                              Subregion
+                              <h5>Subregion</h5>
                             </div>
                           </div>
 
@@ -310,11 +310,11 @@
                                 container
                                 p-2
                                 rounded-3
-                                modal_label
+                                modal_background
                                 flex_box
                               "
                             >
-                              Area
+                              <h5>Area</h5>
                             </div>
                           </div>
 
@@ -341,11 +341,11 @@
                                 container
                                 p-2
                                 rounded-3
-                                modal_label
+                                modal_background
                                 flex_box
                               "
                             >
-                              Currency Symbol
+                              <h5>Currency Symbol</h5>
                             </div>
                           </div>
 
@@ -372,11 +372,11 @@
                                 container
                                 p-2
                                 rounded-3
-                                modal_label
+                                modal_background
                                 flex_box
                               "
                             >
-                              Currency Name
+                              <h5>Currency Name</h5>
                             </div>
                           </div>
 
