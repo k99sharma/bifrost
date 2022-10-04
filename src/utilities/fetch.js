@@ -1,7 +1,7 @@
 async function fetchCountryData(name) {
   // api url
   const API_url =
-    "https://ghost-32-bifrost.herokuapp.com/bifrost/v1.0/country?name=";
+    "https://ghost32-bifrost.onrender.com/bifrost/v1.0/country?name=";
   const response = await fetch(`${API_url}${name}`);
 
   if (response.ok) {
