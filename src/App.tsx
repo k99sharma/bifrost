@@ -1,3 +1,6 @@
+// importing css
+import "./App.css";
+
 // importing libraries
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 

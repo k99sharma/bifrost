@@ -1,9 +1,4 @@
-// importing libraries
-type NavbarProp = {
-  children: never;
-};
-
 // navbar component
-export default function Navbar(props: NavbarProp) {
+export default function Navbar() {
   return <div className="navbar">Navbar</div>;
 }
