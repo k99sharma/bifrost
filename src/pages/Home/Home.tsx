@@ -1,6 +1,3 @@
-// importing css
-import "./Home.css";
-
 // importing libraries
 import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
