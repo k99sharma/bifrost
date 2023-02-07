@@ -1,19 +1,49 @@
 // importing libraries
+import { useState, useEffect, useContext } from "react";
 import { Box, TextField, Autocomplete } from "@mui/material";
 
 // importing utilities
 import countries from "../../utilities/country";
+import { CountryType } from "../../utilities/country";
+
+// importing context
+import DashboardContext from "../../context/dashboardContext";
 
 // search bar component
 export default function SearchBar() {
+  // context
+  const dashboardCtx = useContext(DashboardContext);
+
+  // states
+  const [value, setValue] = useState<CountryType | null>(null);
+  const [inputValue, setInputValue] = useState<string | undefined>("");
+
+  // set search value when the value of search changes
+  useEffect(() => {
+    if (value == null) {
+      dashboardCtx.setCurrentSearch(null);
+      return;
+    }
+
+    dashboardCtx.setCurrentSearch(value);
+  }, [value]);
+
   return (
     <div className="searchBar">
       <Autocomplete
+        value={value}
+        className="md:w-3/5"
+        onChange={(event: any, newValue: CountryType | null) => {
+          setValue(newValue);
+        }}
+        inputValue={inputValue}
+        onInputChange={(event, newInputValue) => {
+          setInputValue(newInputValue);
+        }}
         id="country-select-demo"
-        sx={{ width: 300 }}
         options={countries}
         autoHighlight
-        getOptionLabel={(option) => option.label}
+        getOptionLabel={(option) => option.label ?? option}
         renderOption={(props, option) => (
           <Box
             component="li"
