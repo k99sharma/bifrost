@@ -1,10 +1,5 @@
 // interface for country
-export interface CountryType {
-  code: string;
-  label: string;
-  phone: string;
-  suggested?: boolean;
-}
+import { CountryType } from "./types";
 
 // list of countries
 const countries: readonly CountryType[] = [

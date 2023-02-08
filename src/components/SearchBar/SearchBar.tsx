@@ -1,18 +1,19 @@
 // importing libraries
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { Box, TextField, Autocomplete } from "@mui/material";
 
 // importing utilities
 import countries from "../../utilities/country";
-import { CountryType } from "../../utilities/country";
+import { CountryType } from "../../utilities/types";
 
 // importing context
-import DashboardContext from "../../context/dashboardContext";
 
 // search bar component
-export default function SearchBar() {
-  // context
-  const dashboardCtx = useContext(DashboardContext);
+export default function SearchBar(_props: {
+  setCode: (value: string | null) => void;
+}) {
+  // destructuring props
+  const { setCode } = _props;
 
   // states
   const [value, setValue] = useState<CountryType | null>(null);
@@ -21,11 +22,10 @@ export default function SearchBar() {
   // set search value when the value of search changes
   useEffect(() => {
     if (value == null) {
-      dashboardCtx.setCurrentSearch(null);
       return;
     }
 
-    dashboardCtx.setCurrentSearch(value);
+    setCode(value.code);
   }, [value]);
 
   return (
