@@ -63,7 +63,7 @@
               <div class="container" id="headline_container">
                 <h1 class="greenGradiant">Geolocating Countries</h1>
                 <h3>
-                  Powered by <span class="greenGradiant">Bifrost API</span>
+                  Powered by <span class="greenGradiant">Country API</span>
                 </h3>
                 <br />
                 <h5>
@@ -118,23 +118,13 @@
               src="./assets/icons/twitter.png"
               alt="twitter link"
           /></a>
-          <a
-            href="https://www.linkedin.com/in/kalashsharma99/"
-            target="_blank"
+          <a href="https://www.linkedin.com/in/kalashsharma99/" target="_blank"
             ><img
               class="img-fluid mx-2"
               width="22px"
               height="22px"
               src="./assets/icons/linkedin.png"
               alt="linkedin link"
-          /></a>
-          <a href="https://www.instagram.com/kalashsharma99/" target="_blank"
-            ><img
-              class="img-fluid mx-2"
-              width="22px"
-              height="22px"
-              src="./assets/icons/instagram.png"
-              alt="instagram link"
           /></a>
         </div>
         <!-- social links ends here -->
@@ -148,7 +138,7 @@
                 class="greenGradiant"
                 href="https://www.kalashsharma.com"
                 target="_blank"
-                >ghost_32</a
+                >kalashsharma99</a
               ></span
             ></small
           >
@@ -156,9 +146,7 @@
         <!-- designation container ends here -->
 
         <!-- copyright container -->
-        <div id="copyright">
-          <small>© 2021 Bifrost. All rights reserved</small>
-        </div>
+        <div id="copyright"></div>
         <!-- copyright container ends here -->
       </footer>
       <!-- footer ends here -->
@@ -170,5 +158,9 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const copyright = document.getElementById("copyright");
+      copyright.innerHTML = `<small>© ${new Date().getFullYear()} Bifrost. All rights reserved</small>`;
+    </script>
   </body>
 </html>
