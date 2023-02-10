@@ -24,7 +24,7 @@
 ## Tech Stack & Open-source libraries
 - HTML5 and [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) is used to make responsive layout.
 - 3D model is generated using [ThreeJs](https://threejs.org/) library. You can also checkout out the model [here](https://github.com/k99sharma/earth-model).
-- [Custom API](https://github.com/k99sharma/bifrost-api) is created to fetch countries data.
+- [Country API](https://restcountries.com/) is created to fetch countries data.
 
 <br />
 
@@ -34,7 +34,7 @@
 
 ## Bifrost Working
 - Application is responsive in nature
-- Country data is fetched from [bifrost API](https://github.com/k99sharma/bifrost-api)
+- Country data is fetched from [country API](https://restcountries.com/)
 - `World` folder contains 3D globe model
 - `utilities` folder contains javascript codes of major features
 
@@ -49,7 +49,7 @@ Star the repository. 🌟
 
 # LICENSE
 ```xml
-Designed and developed by 2021 (Kalash Sharma)
+Designed and developed by 2023 (Kalash Sharma)
 
 Licensed under the MIT License, (the "License");
 you may not use this file except in compliance with the License.
