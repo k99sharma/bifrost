@@ -322,14 +322,6 @@
               src="./assets/icons/linkedin.png"
               alt="linkedin link"
           /></a>
-          <a href="https://www.instagram.com/kalashsharma99/" target="_blank"
-            ><img
-              class="img-fluid mx-2"
-              width="22px"
-              height="22px"
-              src="./assets/icons/instagram.png"
-              alt="instagram link"
-          /></a>
         </div>
         <!-- social links ends here -->
 
@@ -342,7 +334,7 @@
                 class="greenGradiant"
                 href="https://www.kalashsharma.me"
                 target="_blank"
-                >ghost_32</a
+                >kalashsharma99</a
               ></span
             ></small
           >
@@ -350,9 +342,7 @@
         <!-- designation container ends here -->
 
         <!-- copyright container -->
-        <div id="copyright">
-          <small>© 2021 Bifrost. All rights reserved</small>
-        </div>
+        <div id="copyright"></div>
         <!-- copyright container ends here -->
       </footer>
       <!-- footer ends here -->
@@ -364,7 +354,10 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-
+    <script>
+      const copyright = document.getElementById("copyright");
+      copyright.innerHTML = `<small>© ${new Date().getFullYear()} Bifrost. All rights reserved</small>`;
+    </script>
     <!-- js script -->
     <script type="module" src="./src/dashboard.js"></script>
   </body>
