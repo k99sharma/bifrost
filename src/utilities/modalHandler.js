@@ -11,26 +11,20 @@ function handleModal(data) {
   const regionHolder = document.querySelector("#countryRegion_value");
   const subregionHolder = document.querySelector("#countrySubregion_value");
   const areaHolder = document.querySelector("#countryArea_value");
-  const currencySymbolHolder = document.querySelector(
-    "#countryCurrencySymbol_value"
-  );
-  const currencyNameHolder = document.querySelector(
-    "#countryCurrencyName_value"
-  );
 
   // add values in holders
 
   // country flag holder
-  const flagUrl = data.flag;
+  const flagUrl = data.flags.png;
   flagHolder.innerHTML = `<img class="img-fluid" src="${flagUrl}" alt="country flag" />`;
 
   // country name value
-  const name = data.name ? data.name : "-";
-  const countryCode = data.code ? data.code : "-";
+  const name = data.name.common ? data.name.common : "-";
+  const countryCode = data.flag ? data.flag : "-";
   nameHolder.innerHTML = `<h5>${name} (${countryCode})</h5>`;
 
   // country capital value
-  const capital = data.capital ? data.capital : "-";
+  const capital = data.capital[0] ? data.capital[0] : "-";
   capitalHolder.innerHTML = `<h5>${capital}</h5>`;
 
   // country region value
@@ -44,17 +38,6 @@ function handleModal(data) {
   // country area value
   const area = data.area ? data.area : "-";
   areaHolder.innerHTML = `<h5>${area} sq km</h5>`;
-
-  // country currency symbol value
-  const currencySymbol = data.currencies[0].symbol
-    ? data.currencies[0].symbol
-    : "-";
-  currencySymbolHolder.innerHTML = `<h5>${currencySymbol}</h5>`;
-
-  // country currency name value
-  const currencyName = data.currencies[0].name ? data.currencies[0].name : "-";
-  const currencyCode = data.currencies[0].code ? data.currencies[0].code : "-";
-  currencyNameHolder.innerHTML = `<h5>${currencyName} (${currencyCode})</h5>`;
 }
 
 export default handleModal;
