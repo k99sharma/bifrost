@@ -15,10 +15,11 @@
 </p>
 
 <p align="center">
-  🏹 Bifrost is a web application to visualize and geolocate countries on a 3D Globe model using latitude and longitude. 3D Globe model is generated using ThreeJs library.
+  🏹 Bifrost is a web application to locate and learn about different countries in the world. It provides an interactive way to locate countries.
 </p>
 
-![bifrost_screenshot](https://user-images.githubusercontent.com/54969439/123527132-b9110300-d6fa-11eb-89a6-b0027eb0acd2.png)
+![Screenshot (106)](https://user-images.githubusercontent.com/54969439/232871203-5fe0f6ea-c07c-4d45-adf1-4a2237f758b9.png)
+
 <br />
 
 ## Tech Stack & Open-source libraries
